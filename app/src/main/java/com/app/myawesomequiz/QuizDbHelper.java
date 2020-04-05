@@ -70,8 +70,8 @@ public class QuizDbHelper extends SQLiteOpenHelper {
         db.insert(QuestionTable.TABLE_NAME, null, cv);
     }
 
-    public List<Question> getAllQuestion() {
-        List<Question> questionList = new ArrayList<>();
+    public ArrayList<Question> getAllQuestion() {
+        ArrayList<Question> questionList = new ArrayList<>();
         db = getReadableDatabase();
         Cursor c = db.rawQuery("SELECT * FROM " + QuestionTable.TABLE_NAME, null);
 
